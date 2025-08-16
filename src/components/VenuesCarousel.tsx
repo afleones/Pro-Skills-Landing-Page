@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MapPin, Phone, Clock, Car, Bus, Wifi, Car as Parking, Users, Star } from 'lucide-react';
+import { MapPin, Phone, Clock, Bus, Wifi, Car as Parking, Users, Star } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@ui/card';
 import { Badge } from '@ui/badge';
 import { Button } from '@ui/button';

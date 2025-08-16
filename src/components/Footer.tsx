@@ -2,7 +2,6 @@
 
 import { Facebook, Instagram, Twitter, Youtube, Mail, Phone, MapPin, Heart, Coffee, Award, Users, Calendar } from "lucide-react";
 import { Card, CardContent } from "@ui/card";
-import { Badge } from "@ui/badge";
 import logoImage from "/assets/images/academy/logo.png";
 
 const Footer = () => {

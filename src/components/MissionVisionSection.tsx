@@ -1,9 +1,8 @@
 'use client';
 
-import { Target, Eye, BookOpen, Calendar, Award, Users } from 'lucide-react';
-import { Card, CardContent } from './ui/card';
-import { Badge } from './ui/badge';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import { Target, Eye, BookOpen, Award, Users } from 'lucide-react';
+import { Card, CardContent } from '@ui/card';
+import { Badge } from '@ui/badge';
 
 const MissionVisionSection = () => {
   const timeline = [
