@@ -1,0 +1,133 @@
+---
+---
+
+<section class="mission" id="esencia">
+  <div class="container">
+    <div class="section-header scroll-item">
+      <span class="badge">Nuestra Esencia</span>
+      <h2 class="section-title">MISIÓN Y <span>VISIÓN</span></h2>
+    </div>
+
+    <div class="mv-grid">
+      <div class="mv-card scroll-item">
+        <div class="mv-icon">🚀</div>
+        <h3>Nuestra Misión</h3>
+        <p>Formar atletas íntegros a través del baloncesto, fomentando la disciplina, el trabajo en equipo y el desarrollo personal. Buscamos impactar positivamente en la vida de cada jugador, brindándoles herramientas para triunfar en la cancha y en la vida.</p>
+      </div>
+
+      <div class="mv-card scroll-item delay">
+        <div class="mv-icon">👁️</div>
+        <h3>Nuestra Visión</h3>
+        <p>Ser reconocidos como la academia de baloncesto líder en Colombia, destacándonos por nuestra metodología internacional y la calidad humana de nuestros entrenadores. Aspiramos a ser el principal semillero de talentos deportivos del país.</p>
+      </div>
+
+      <div class="mv-card scroll-item delay-2">
+        <div class="mv-icon">🤝</div>
+        <h3>Nuestros Valores</h3>
+        <p>Vivimos el baloncesto bajo los pilares de la <strong>Disciplina</strong>, la <strong>Excelencia</strong>, el <strong>Respeto</strong> y la <strong>Comunidad</strong>. Valores que no solo construyen grandes atletas, sino ciudadanos ejemplares y líderes del futuro.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .mission {
+    background: var(--black-soft);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section-header { text-align: center; max-width: 640px; margin: 0 auto 56px; }
+
+  .mv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .mv-card {
+    background: var(--black-card);
+    border: 1px solid var(--black-border);
+    border-radius: 16px;
+    padding: 48px 40px;
+    text-align: center;
+    transition: var(--transition);
+  }
+
+  .mv-card:hover {
+    border-color: rgba(255, 215, 0, 0.4);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.06);
+  }
+
+  .mv-icon {
+    font-size: 3rem;
+    margin-bottom: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    background: rgba(255, 215, 0, 0.12);
+    border-radius: 50%;
+  }
+
+  .mv-card h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+
+  .mv-card p {
+    font-size: 1.05rem;
+    color: rgba(0,0,0,0.65);
+    line-height: 1.75;
+    margin: 0;
+  }
+
+  /* Scroll Animation Classes */
+  .scroll-item {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scroll-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .scroll-item.delay { transition-delay: 0.2s; }
+  .scroll-item.delay-2 { transition-delay: 0.4s; }
+
+  @media (max-width: 768px) {
+    .mv-grid { grid-template-columns: 1fr; gap: 24px; }
+    .scroll-item.delay, .scroll-item.delay-2 { transition-delay: 0s; }
+  }
+</style>
+
+<script>
+  // Intersection Observer for the bottom-to-top scroll reveal animation
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.15
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target); // Play animation only once
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.scroll-item').forEach(item => {
+    observer.observe(item);
+  });
+</script>

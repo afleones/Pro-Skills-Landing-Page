@@ -1,0 +1,310 @@
+---
+---
+
+<section class="pricing" id="precios">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge">Planes y Precios</span>
+      <h2 class="section-title">INVIERTE EN TU <span>FUTURO</span></h2>
+      <p class="section-desc">Planes accesibles y transparentes. Sin costos ocultos.</p>
+    </div>
+
+    <div class="pricing-toggle">
+      <span class="toggle-label active" id="label-monthly">Mensual</span>
+      <button class="toggle-switch" id="billingToggle" aria-label="Cambiar facturación">
+        <div class="toggle-thumb"></div>
+      </button>
+      <span class="toggle-label" id="label-yearly">
+        Semestral
+        <span class="save-badge">Ahorra 20%</span>
+      </span>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-header">
+          <span class="price-icon">🌱</span>
+          <h3>Starter</h3>
+          <p>Ideal para el primer acercamiento al deporte</p>
+        </div>
+        <div class="price-amount">
+          <span class="currency">COP</span>
+          <span class="amount monthly">120.000</span>
+          <span class="amount semester hidden">576.000</span>
+          <span class="period">/mes</span>
+        </div>
+        <ul class="price-features">
+          <li class="inc">✅ 2 sesiones por semana</li>
+          <li class="inc">✅ Categoría Minibasket o Juvenil</li>
+          <li class="inc">✅ Acceso a una sede</li>
+          <li class="inc">✅ Seguimiento mensual</li>
+          <li class="exc">❌ Uniforme incluido</li>
+          <li class="exc">❌ Skills Clinics gratis</li>
+        </ul>
+        <a href="#contacto" class="btn btn-primary price-btn">Empezar Ahora</a>
+      </div>
+
+      <div class="price-card featured">
+        <div class="price-popular">⭐ Más Popular</div>
+        <div class="price-header">
+          <span class="price-icon">⚡</span>
+          <h3>Pro</h3>
+          <p>Para atletas comprometidos con su desarrollo</p>
+        </div>
+        <div class="price-amount">
+          <span class="currency">COP</span>
+          <span class="amount monthly">220.000</span>
+          <span class="amount semester hidden">1.056.000</span>
+          <span class="period">/mes</span>
+        </div>
+        <ul class="price-features">
+          <li class="inc">✅ 3 sesiones por semana</li>
+          <li class="inc">✅ Todos los programas</li>
+          <li class="inc">✅ Acceso a 2 sedes</li>
+          <li class="inc">✅ Seguimiento quincenal</li>
+          <li class="inc">✅ Uniforme incluido</li>
+          <li class="exc">❌ Skills Clinics gratis</li>
+        </ul>
+        <a href="#contacto" class="btn price-btn featured-btn">Empezar Ahora</a>
+      </div>
+
+      <div class="price-card">
+        <div class="price-header">
+          <span class="price-icon">🏆</span>
+          <h3>Elite</h3>
+          <p>Formación completa para el alto rendimiento</p>
+        </div>
+        <div class="price-amount">
+          <span class="currency">COP</span>
+          <span class="amount monthly">380.000</span>
+          <span class="amount semester hidden">1.824.000</span>
+          <span class="period">/mes</span>
+        </div>
+        <ul class="price-features">
+          <li class="inc">✅ Entrenamiento diario</li>
+          <li class="inc">✅ Todos los programas</li>
+          <li class="inc">✅ Todas las sedes</li>
+          <li class="inc">✅ Seguimiento semanal</li>
+          <li class="inc">✅ Uniforme y equipamiento</li>
+          <li class="inc">✅ Skills Clinics incluidas</li>
+        </ul>
+        <a href="#contacto" class="btn btn-primary price-btn">Empezar Ahora</a>
+      </div>
+    </div>
+
+    <div class="pricing-promo">
+      <div class="promo-icon">🎉</div>
+      <div class="promo-text">
+        <strong>Primera clase GRATIS</strong>
+        <p>Ven a vivir la experiencia PRO SKILLS sin compromiso. Contáctanos para agendar tu sesión de prueba.</p>
+      </div>
+      <a href="#contacto" class="btn btn-primary">Agendar Clase Gratis</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .pricing { background: var(--black-soft); }
+
+  .section-header { text-align: center; max-width: 640px; margin: 0 auto 48px; }
+  .section-desc { color: rgba(0,0,0,0.5); font-size: 1rem; margin-top: 14px; line-height: 1.7; }
+
+  .pricing-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 44px;
+  }
+
+  .toggle-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: rgba(0,0,0,0.35);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .toggle-label.active { color: var(--white); }
+
+  .toggle-switch {
+    width: 54px;
+    height: 28px;
+    background: var(--black-border);
+    border-radius: 100px;
+    position: relative;
+    transition: background 0.3s;
+    border: 1px solid rgba(255,215,0,0.2);
+  }
+
+  .toggle-switch.on { background: var(--gold); }
+
+  .toggle-thumb {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: white;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+
+  .toggle-switch.on .toggle-thumb { transform: translateX(26px); }
+
+  .save-badge {
+    font-size: 0.68rem;
+    font-weight: 700;
+    background: var(--gold);
+    color: var(--black);
+    padding: 2px 8px;
+    border-radius: 100px;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 36px;
+  }
+
+  .price-card {
+    background: var(--black-card);
+    border: 1px solid var(--black-border);
+    border-radius: 18px;
+    padding: 32px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    position: relative;
+    transition: var(--transition);
+  }
+
+  .price-card:hover {
+    border-color: rgba(255,215,0,0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 50px rgba(0,0,0,0.5);
+  }
+
+  .price-card.featured {
+    border-color: var(--gold);
+    transform: scale(1.02);
+    background: linear-gradient(160deg, #FFD700 0%, #FFE666 100%);
+    box-shadow: 0 8px 40px rgba(255,215,0,0.3);
+  }
+
+  .price-card.featured:hover { transform: scale(1.02) translateY(-4px); }
+
+  .price-popular {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--proskills-black);
+    color: var(--proskills-gold);
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 5px 20px;
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+
+  .price-header { display: flex; flex-direction: column; gap: 8px; }
+  .price-icon { font-size: 1.8rem; }
+
+  .price-card h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.9rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--white);
+    line-height: 1;
+  }
+
+  .price-header p { font-size: 0.85rem; color: rgba(0,0,0,0.45); line-height: 1.5; margin: 0; }
+
+  .price-amount { display: flex; align-items: baseline; gap: 4px; }
+
+  .currency { font-size: 0.82rem; font-weight: 700; color: rgba(0,0,0,0.35); }
+
+  .amount {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .amount.hidden { display: none; }
+  .period { font-size: 0.82rem; font-weight: 600; color: rgba(0,0,0,0.35); }
+
+  .price-features { list-style: none; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .price-features li { font-size: 0.875rem; }
+  .inc { color: rgba(0,0,0,0.7); }
+  .exc { color: rgba(0,0,0,0.25); text-decoration: line-through; }
+
+  .price-btn { width: 100%; justify-content: center; border-radius: 10px !important; }
+
+  .featured-btn {
+    background: var(--proskills-black);
+    color: var(--proskills-gold);
+    font-weight: 800;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+
+  .featured-btn:hover {
+    background: #000;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  }
+
+  .pricing-promo {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: rgba(255,215,0,0.05);
+    border: 2px dashed rgba(255,215,0,0.3);
+    border-radius: 14px;
+    padding: 26px 28px;
+    flex-wrap: wrap;
+  }
+
+  .promo-icon { font-size: 2.2rem; flex-shrink: 0; }
+  .promo-text { flex: 1; min-width: 200px; }
+
+  .promo-text strong {
+    display: block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+
+  .promo-text p { font-size: 0.875rem; color: rgba(0,0,0,0.45); margin: 0; line-height: 1.5; }
+
+  @media (max-width: 640px) {
+    .pricing-promo { flex-direction: column; text-align: center; }
+    .pricing-promo .btn { width: 100%; justify-content: center; }
+  }
+</style>
+
+<script>
+  const toggle = document.getElementById('billingToggle');
+  const labelMonthly = document.getElementById('label-monthly');
+  const labelYearly = document.getElementById('label-yearly');
+  let isSemester = false;
+
+  toggle?.addEventListener('click', () => {
+    isSemester = !isSemester;
+    toggle.classList.toggle('on', isSemester);
+    labelMonthly?.classList.toggle('active', !isSemester);
+    labelYearly?.classList.toggle('active', isSemester);
+    document.querySelectorAll('.amount.monthly').forEach(el => el.classList.toggle('hidden', isSemester));
+    document.querySelectorAll('.amount.semester').forEach(el => el.classList.toggle('hidden', !isSemester));
+  });
+</script>

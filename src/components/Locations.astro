@@ -1,0 +1,169 @@
+---
+---
+
+<section class="locations" id="sedes">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge">Nuestras Sedes</span>
+      <h2 class="section-title">ESTAMOS EN <span>TODO COLOMBIA</span></h2>
+      <p class="section-desc">Tres sedes estratégicamente ubicadas para que puedas entrenar sin importar en qué ciudad estés.</p>
+    </div>
+
+    <div class="locations-grid">
+      <div class="location-card primary">
+        <div class="loc-header">
+          <div class="loc-icon">📍</div>
+          <div class="loc-badge">Sede Principal</div>
+        </div>
+        <h3>Bogotá</h3>
+        <p class="loc-address">
+          <strong>Dirección:</strong> Cra. 15 #82-36, Barrio El Nogal<br />
+          Bogotá D.C., Colombia
+        </p>
+        <div class="loc-details">
+          <div class="loc-detail"><span>🏟️</span><span>4 canchas reglamentarias · Gimnasio</span></div>
+          <div class="loc-detail"><span>🅿️</span><span>Parqueadero gratuito para miembros</span></div>
+          <div class="loc-detail"><span>🚌</span><span>A 5 min de la Estación Calle 85, TM</span></div>
+          <div class="loc-detail"><span>📞</span><span>+57 300 123 4567</span></div>
+        </div>
+        <a href="https://maps.google.com/?q=Bogotá+Colombia" target="_blank" rel="noopener" class="btn btn-primary loc-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Ver en Mapa
+        </a>
+      </div>
+
+      <div class="location-card">
+        <div class="loc-header">
+          <div class="loc-icon">📍</div>
+          <div class="loc-badge secondary">Medellín</div>
+        </div>
+        <h3>Medellín</h3>
+        <p class="loc-address">
+          <strong>Dirección:</strong> Calle 33 #74a-64, El Poblado<br />
+          Medellín, Antioquia
+        </p>
+        <div class="loc-details">
+          <div class="loc-detail"><span>🏟️</span><span>2 canchas · Área de fortalecimiento</span></div>
+          <div class="loc-detail"><span>🅿️</span><span>Parqueadero disponible</span></div>
+          <div class="loc-detail"><span>🚌</span><span>Cerca al Metro El Poblado</span></div>
+          <div class="loc-detail"><span>📞</span><span>+57 304 987 6543</span></div>
+        </div>
+        <a href="https://maps.google.com/?q=Medellín+Colombia" target="_blank" rel="noopener" class="btn btn-primary loc-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Ver en Mapa
+        </a>
+      </div>
+
+      <div class="location-card">
+        <div class="loc-header">
+          <div class="loc-icon">📍</div>
+          <div class="loc-badge secondary">Cali</div>
+        </div>
+        <h3>Cali</h3>
+        <p class="loc-address">
+          <strong>Dirección:</strong> Av. 6N #25AN-48, Granada<br />
+          Cali, Valle del Cauca
+        </p>
+        <div class="loc-details">
+          <div class="loc-detail"><span>🏟️</span><span>2 canchas · Vestiarios modernos</span></div>
+          <div class="loc-detail"><span>🅿️</span><span>Parqueadero disponible</span></div>
+          <div class="loc-detail"><span>🚌</span><span>Rutas MIO accesibles</span></div>
+          <div class="loc-detail"><span>📞</span><span>+57 316 555 7890</span></div>
+        </div>
+        <a href="https://maps.google.com/?q=Cali+Colombia" target="_blank" rel="noopener" class="btn btn-primary loc-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Ver en Mapa
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .locations { background: var(--black-mid); }
+
+  .section-header { text-align: center; max-width: 640px; margin: 0 auto 56px; }
+  .section-desc { color: rgba(0,0,0,0.5); font-size: 1rem; margin-top: 14px; line-height: 1.7; }
+
+  .locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .location-card {
+    background: var(--black-card);
+    border: 1px solid var(--black-border);
+    border-radius: 18px;
+    padding: 32px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: var(--transition);
+  }
+
+  .location-card:hover {
+    border-color: rgba(255, 215, 0, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+  }
+
+  .location-card.primary {
+    border-color: rgba(255, 215, 0, 0.4);
+    background: linear-gradient(135deg, #FFD700 0%, #FFE666 100%);
+    box-shadow: 0 4px 30px rgba(255,215,0,0.2);
+  }
+
+  .loc-header { display: flex; align-items: center; justify-content: space-between; }
+  .loc-icon { font-size: 1.4rem; }
+
+  .loc-badge {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: var(--gold);
+    color: var(--black);
+    padding: 4px 14px;
+    border-radius: 100px;
+  }
+
+  .loc-badge.secondary {
+    background: rgba(255, 215, 0, 0.1);
+    color: var(--gold);
+  }
+
+  .location-card h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--white);
+    line-height: 1;
+  }
+
+  .loc-address { font-size: 0.875rem; color: rgba(0,0,0,0.5); line-height: 1.6; }
+  .loc-address strong { color: var(--gold); }
+
+  .loc-details { display: flex; flex-direction: column; gap: 10px; flex: 1; }
+
+  .loc-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: rgba(0,0,0,0.5);
+  }
+
+  .loc-btn { width: 100%; justify-content: center; border-radius: 10px !important; }
+  
+  .location-card.primary .loc-btn {
+    background: var(--proskills-black);
+    color: var(--proskills-gold);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+  
+  .location-card.primary .loc-btn:hover {
+    background: #000;
+  }
+</style>

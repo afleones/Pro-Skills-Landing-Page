@@ -1,0 +1,214 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const isHome = pathname === '/' || pathname === '/index.html' || pathname === '';
+const prefix = isHome ? '' : '/';
+---
+
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href={`${prefix}#inicio`} class="logo">
+      <img src="/logo-shield.png" alt="PRO SKILLS BASKETBALL Logo" class="logo-img" />
+      <div class="logo-text">
+        <span class="logo-name">PRO SKILLS</span>
+        <span class="logo-sub">BASKETBALL · COLOMBIA</span>
+      </div>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href={`${prefix}#inicio`} class="nav-link">Inicio</a></li>
+      <li><a href={`${prefix}#nosotros`} class="nav-link">Nosotros</a></li>
+      <li><a href={`${prefix}#programas`} class="nav-link">Programas</a></li>
+      <li><a href={`${prefix}#entrenadores`} class="nav-link">Entrenadores</a></li>
+      <li><a href={`${prefix}#sedes`} class="nav-link">Sedes</a></li>
+      <li><a href={`${prefix}#horarios`} class="nav-link">Horarios</a></li>
+      <li><a href={`${prefix}#precios`} class="nav-link">Precios</a></li>
+      <li><a href="/pagos" class="btn btn-primary nav-btn" style="background: var(--proskills-gold); color: var(--proskills-black);">Pago de mensualidad</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<style>
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+    background: transparent;
+  }
+
+  .navbar.scrolled {
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+    box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+  }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .logo-img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.4));
+  }
+
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+
+  .logo-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 900;
+    color: var(--proskills-white);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .logo-sub {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 700;
+    color: var(--proskills-gold);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    list-style: none;
+  }
+
+  .nav-link {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.8);
+    padding: 8px 11px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--proskills-gold);
+    background: rgba(255, 215, 0, 0.08);
+  }
+
+  .nav-btn {
+    padding: 10px 22px !important;
+    font-size: 0.88rem !important;
+    margin-left: 8px;
+    border-radius: 50px !important;
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    padding: 4px;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: var(--proskills-gold);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.active span:nth-child(2) { opacity: 0; }
+  .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  @media (max-width: 960px) {
+    .hamburger { display: flex; }
+
+    .nav-links {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 300px;
+      height: 100vh;
+      background: var(--proskills-black);
+      border-left: 1px solid rgba(255, 215, 0, 0.15);
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 100px 28px 40px;
+      gap: 4px;
+      transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav-links.open { right: 0; }
+    .nav-link { font-size: 1.05rem; padding: 12px 16px; width: 100%; color: var(--proskills-white) !important; }
+    .nav-btn { margin-left: 0 !important; margin-top: 12px; width: 100%; justify-content: center; }
+  }
+</style>
+
+<script>
+document.addEventListener('astro:page-load', () => {
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  const onScroll = () => {
+    navbar?.classList.toggle('scrolled', window.scrollY > 60);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); // initial check
+
+  hamburger?.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks?.classList.toggle('open');
+  });
+
+  navLinks?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger?.classList.remove('active');
+      navLinks?.classList.remove('open');
+    });
+  });
+
+  const sections = document.querySelectorAll('section[id]');
+  window.addEventListener('scroll', () => {
+    const scrollPos = window.scrollY + 100;
+    sections.forEach(section => {
+      const top = section.offsetTop;
+      const height = section.offsetHeight;
+      const id = section.getAttribute('id');
+      const link = navLinks?.querySelector(`a[href$="#${id}"]`);
+      if (scrollPos >= top && scrollPos < top + height) {
+        navLinks?.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+        link?.classList.add('active');
+      }
+    });
+  });
+});
+</script>

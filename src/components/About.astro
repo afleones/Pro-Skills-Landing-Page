@@ -1,0 +1,212 @@
+---
+---
+
+<section class="about" id="nosotros">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- Left: Featured Image -->
+      <div class="about-visual">
+        <div class="img-main">
+          <img src="/psb-photo-25.jpg" alt="Familia PSB Colombia" />
+          <div class="img-label">Familia PSB Colombia</div>
+        </div>
+        <div class="gold-accent"></div>
+      </div>
+
+      <!-- Right: text -->
+      <div class="about-text">
+        <span class="badge">Quiénes Somos</span>
+        <h2 class="section-title">DONDE SE FORJAN <span>CAMPEONES</span></h2>
+        <p class="about-desc">
+          En <strong>PRO SKILLS BASKETBALL Colombia</strong>, creemos que el baloncesto es mucho más que un deporte: es una escuela de vida. Desde 2016, hemos guiado a cientos de jóvenes y adultos hacia la excelencia deportiva con disciplina, pasión y metodología de clase mundial.
+        </p>
+        <p class="about-desc">
+          Nuestros programas desarrollan habilidades técnicas, físicas y mentales, preparando a cada atleta para competir al más alto nivel — desde categorías locales hasta representaciones nacionales e internacionales.
+        </p>
+
+        <div class="values-grid">
+          <div class="value-item">
+            <div class="value-icon">💪</div>
+            <div>
+              <strong>Disciplina</strong>
+              <p>Compromiso y esfuerzo diario</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">🎯</div>
+            <div>
+              <strong>Metodología</strong>
+              <p>Técnica de nivel internacional</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">🤝</div>
+            <div>
+              <strong>Comunidad</strong>
+              <p>Familia de atletas y familias</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">🌟</div>
+            <div>
+              <strong>Excelencia</strong>
+              <p>Siempre buscando la mejora</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-award">
+          <div class="award-icon">🏆</div>
+          <div>
+            <strong>Múltiples Campeonatos Nacionales</strong>
+            <span>Nuestra academia ha formado atletas que han triunfado en torneos locales, regionales y nacionales.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    background: var(--black-mid);
+    overflow: hidden;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 72px;
+    align-items: center;
+  }
+
+  .about-visual {
+    position: relative;
+  }
+
+  .img-main {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.6);
+  }
+
+  .img-main img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+  }
+
+  .img-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    color: var(--gold);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 28px 16px 14px;
+  }
+
+  .gold-accent {
+    position: absolute;
+    bottom: -24px;
+    left: -24px;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(255,215,0,0.2) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-desc {
+    color: rgba(0,0,0,0.65);
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .about-desc strong { color: var(--gold); font-weight: 700; }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .value-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: var(--black-card);
+    border: 1px solid var(--black-border);
+    border-radius: 12px;
+    padding: 16px;
+    transition: var(--transition);
+  }
+
+  .value-item:hover {
+    border-color: rgba(255, 215, 0, 0.4);
+    box-shadow: 0 4px 20px rgba(255, 215, 0, 0.08);
+  }
+
+  .value-icon { font-size: 1.4rem; flex-shrink: 0; }
+
+  .value-item strong {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--white);
+    margin-bottom: 2px;
+  }
+
+  .value-item p {
+    font-size: 0.78rem;
+    color: rgba(0,0,0,0.45);
+    margin: 0;
+  }
+
+  .about-award {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(255, 215, 0, 0.06);
+    border: 1px solid rgba(255, 215, 0, 0.25);
+    border-radius: 12px;
+    padding: 18px 20px;
+  }
+
+  .award-icon { font-size: 2rem; flex-shrink: 0; }
+
+  .about-award strong {
+    display: block;
+    color: var(--gold);
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+  }
+
+  .about-award span {
+    font-size: 0.82rem;
+    color: rgba(0,0,0,0.5);
+    line-height: 1.55;
+  }
+
+  @media (max-width: 900px) {
+    .about-grid { grid-template-columns: 1fr; gap: 48px; }
+    .img-main img { height: 320px; }
+  }
+
+  @media (max-width: 480px) {
+    .values-grid { grid-template-columns: 1fr; }
+  }
+</style>

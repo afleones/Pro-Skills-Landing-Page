@@ -1,0 +1,223 @@
+---
+---
+
+<section class="coaches" id="entrenadores">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge">Nuestro Equipo</span>
+      <h2 class="section-title">CONOCE A LOS <span>ENTRENADORES</span></h2>
+      <p class="section-desc">Profesionales certificados con experiencia en ligas nacionales e internacionales, apasionados por el desarrollo humano y deportivo.</p>
+    </div>
+
+    <div class="coaches-grid">
+      <div class="coach-card featured">
+        <div class="coach-img-wrap">
+          <img src="/psb-photo-15.jpg" alt="Head Coach · Director Técnico PSB" class="coach-img" />
+          <div class="coach-overlay"></div>
+          <div class="coach-badge">Head Coach</div>
+        </div>
+        <div class="coach-info">
+          <h3>Director Técnico</h3>
+          <span class="coach-title">PSB · Pro Skills Basketball Colombia</span>
+          <p>Fundador y director de la academia. Con más de 15 años de experiencia formando atletas a nivel nacional. Certificado FIBA, apasionado por el desarrollo integral del deportista.</p>
+          <div class="coach-tags">
+            <span class="tag">Fundador</span>
+            <span class="tag">FIBA Certificado</span>
+            <span class="tag">15+ años</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="coach-card">
+        <div class="coach-img-wrap">
+          <img src="/psb-photo-20.jpg" alt="Entrenador Élite PSB" class="coach-img" />
+          <div class="coach-overlay"></div>
+          <div class="coach-badge">Prog. Élite</div>
+        </div>
+        <div class="coach-info">
+          <h3>Categoría Élite</h3>
+          <span class="coach-title">Entrenador · Alto Rendimiento</span>
+          <p>Especialista en desarrollo técnico-táctico para jugadores en etapa de alto rendimiento. Trabaja con atletas que buscan proyección universitaria y semiprofesional.</p>
+          <div class="coach-tags">
+            <span class="tag">Alto Rendimiento</span>
+            <span class="tag">Táctica</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="coach-card">
+        <div class="coach-img-wrap">
+          <img src="/psb-photo-30.jpg" alt="Entrenador Juvenil PSB" class="coach-img" />
+          <div class="coach-overlay"></div>
+          <div class="coach-badge">Cat. Juvenil</div>
+        </div>
+        <div class="coach-info">
+          <h3>Categoría Juvenil</h3>
+          <span class="coach-title">Entrenador · Formación Deportiva</span>
+          <p>Dedicado a la formación técnica y preparación física en categorías 11-17 años. Sus equipos han obtenido múltiples podios en torneos departamentales y nacionales.</p>
+          <div class="coach-tags">
+            <span class="tag">Formación</span>
+            <span class="tag">Competencias</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .coaches {
+    background: var(--black);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .coaches::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(255,215,0,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .coaches::after {
+    content: '';
+    position: absolute;
+    bottom: -60px;
+    left: -60px;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(0,102,204,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .section-header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 60px;
+  }
+
+  .section-desc {
+    color: rgba(0,0,0,0.5);
+    font-size: 1rem;
+    margin-top: 14px;
+    line-height: 1.7;
+  }
+
+  .coaches-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .coach-card {
+    background: var(--black-card);
+    border: 1px solid var(--black-border);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: var(--transition);
+  }
+
+  .coach-card:hover {
+    border-color: rgba(255, 215, 0, 0.4);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,215,0,0.1);
+  }
+
+  .coach-card.featured {
+    border-color: rgba(255, 215, 0, 0.35);
+    box-shadow: 0 4px 30px rgba(255, 215, 0, 0.08);
+  }
+
+  .coach-img-wrap {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+  }
+
+  .coach-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .coach-card:hover .coach-img { transform: scale(1.06); }
+
+  .coach-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.85) 100%);
+  }
+
+  .coach-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: var(--gold);
+    color: var(--proskills-black);
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 5px 14px;
+    border-radius: 100px;
+  }
+
+  .coach-info { padding: 22px; }
+
+  .coach-info h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--proskills-black);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+
+  .coach-title {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--proskills-black);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+  }
+
+  .coach-info p {
+    font-size: 0.875rem;
+    color: rgba(0,0,0,0.7);
+    line-height: 1.65;
+    margin-bottom: 16px;
+  }
+
+  .coach-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    background: rgba(255,215,0,0.2);
+    color: var(--proskills-black);
+    padding: 4px 11px;
+    border-radius: 100px;
+    border: 1px solid rgba(255,215,0,0.2);
+  }
+
+  @media (max-width: 900px) {
+    .coaches-grid {
+      grid-template-columns: 1fr;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+  }
+</style>
