@@ -1,5 +1,5 @@
 ---
-import { ClientRouter } from 'astro:transitions';
+import { ClientRouter } from "astro:transitions";
 
 interface Props {
   title?: string;
@@ -19,7 +19,10 @@ const {
     <link rel="icon" type="image/png" href="/logo-shield.png" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
-    <meta name="keywords" content="baloncesto, academia, colombia, basketball, entrenamiento, niños, adultos, pro skills, PSB" />
+    <meta
+      name="keywords"
+      content="baloncesto, academia, colombia, basketball, entrenamiento, niños, adultos, pro skills, PSB"
+    />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
@@ -27,20 +30,31 @@ const {
     <ClientRouter />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <slot />
 
     <!-- Custom Cursor Follower -->
-    <div id="cursor-follower" aria-hidden="true" style="position: fixed; top: 0; left: 0; width: 24px; height: 24px; pointer-events: none; z-index: 9999; transform: translate(-100px, -100px); transition: transform 0.1s cubic-bezier(0.16, 1, 0.3, 1); will-change: transform; opacity: 0.9;">
-      <img src="/logo-shield.png" alt="" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 3px 5px rgba(0,0,0,0.4)); display: block;" />
+    <div
+      id="cursor-follower"
+      aria-hidden="true"
+      style="position: fixed; top: 0; left: 0; width: 24px; height: 24px; pointer-events: none; z-index: 9999; transform: translate(-100px, -100px); transition: transform 0.1s cubic-bezier(0.16, 1, 0.3, 1); will-change: transform; opacity: 0.9;"
+    >
+      <img
+        src="/logo-shield.png"
+        alt=""
+        style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 3px 5px rgba(0,0,0,0.4)); display: block;"
+      />
     </div>
 
     <script>
-      const follower = document.getElementById('cursor-follower');
+      const follower = document.getElementById("cursor-follower");
       if (follower) {
-        document.addEventListener('mousemove', (e) => {
+        document.addEventListener("mousemove", (e) => {
           // Adjust coordinates to place the logo slightly below and right of the native arrow cursor
           follower.style.transform = `translate(${e.clientX + 14}px, ${e.clientY + 18}px)`;
         });
@@ -50,7 +64,9 @@ const {
 </html>
 
 <style is:global>
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -58,35 +74,35 @@ const {
 
   :root {
     /* Pro Skills Official Brand Colors */
-    --proskills-gold: #FFD700;
+    --proskills-gold: #ffd700;
     --proskills-black: #000000;
     --proskills-white: #ffffff;
-    --proskills-yellow: #FFFF00;
-    --proskills-blue: #0066CC;
-    --proskills-red: #FF0000;
+    --proskills-yellow: #ffff00;
+    --proskills-blue: #0066cc;
+    --proskills-red: #ff0000;
 
     /* Semantic Mappings for LIGHT THEME */
     --gold: var(--proskills-gold);
     --gold-light: var(--proskills-yellow);
-    --gold-dark: #CC9F00;
+    --gold-dark: #cc9f00;
     --gold-glow: rgba(255, 215, 0, 0.35);
 
     /* Backgrounds: formerly dark, now light grayish white */
-    --black: #F4F5F7;
-    --black-mid: #F9FAFB;
-    --black-soft: #FFFFFF;
-    --black-card: #FFFFFF;
-    --black-border: #E5E7EB;
+    --black: #f4f5f7;
+    --black-mid: #f9fafb;
+    --black-soft: #ffffff;
+    --black-card: #ffffff;
+    --black-border: #e5e7eb;
 
     --yellow: var(--proskills-yellow);
-    
+
     --blue: var(--proskills-blue);
-    --blue-light: #3388DD;
-    --blue-dark: #004F9E;
+    --blue-light: #3388dd;
+    --blue-dark: #004f9e;
     --blue-glow: rgba(0, 102, 204, 0.3);
 
     --red: var(--proskills-red);
-    --red-light: #FF3333;
+    --red-light: #ff3333;
 
     /* Text Colors: formerly light, now dark */
     --white: var(--proskills-black);
@@ -95,8 +111,8 @@ const {
     --white-faint: rgba(0, 0, 0, 0.15);
 
     /* Typography */
-    --font-body: 'Outfit', sans-serif;
-    --font-heading: 'Barlow Condensed', sans-serif;
+    --font-body: "Outfit", sans-serif;
+    --font-heading: "Barlow Condensed", sans-serif;
 
     /* Utils */
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -106,7 +122,30 @@ const {
     --shadow-lg: 0 8px 48px rgba(0, 0, 0, 0.6);
   }
 
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--proskills-black) var(--black-mid);
+  }
+
+  *::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--black-mid);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--proskills-black);
+    border-radius: 999px;
+    border: 2px solid var(--black-mid);
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #111111;
+  }
 
   body {
     font-family: var(--font-body);
@@ -130,30 +169,45 @@ const {
     will-change: transform;
     opacity: 0.95;
   }
-  
+
   .cursor-follower img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4));
-  }
-  
-  /* Disable on touch screens */
-  @media (pointer: coarse) {
-    .cursor-follower { display: none !important; }
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.4));
   }
 
-  h1, h2, h3, h4 {
+  /* Disable on touch screens */
+  @media (pointer: coarse) {
+    .cursor-follower {
+      display: none !important;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: var(--font-heading);
     line-height: 1.1;
     font-weight: 800;
   }
 
-  img { max-width: 100%; height: auto; }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 
-  a { text-decoration: none; color: inherit; }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 
-  button { cursor: pointer; border: none; font-family: var(--font-body); }
+  button {
+    cursor: pointer;
+    border: none;
+    font-family: var(--font-body);
+  }
 
   .container {
     max-width: 1200px;
@@ -170,7 +224,9 @@ const {
     color: var(--white);
   }
 
-  .section-title span { color: var(--gold); }
+  .section-title span {
+    color: var(--gold);
+  }
 
   .badge {
     display: inline-block;
@@ -236,41 +292,82 @@ const {
     box-shadow: 0 8px 32px rgba(0, 102, 204, 0.5);
   }
 
-  section { padding: 96px 0; }
+  section {
+    padding: 96px 0;
+  }
 
-  @media (max-width: 768px) { section { padding: 64px 0; } }
+  @media (max-width: 768px) {
+    section {
+      padding: 64px 0;
+    }
+  }
 
   /* Animations */
   @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   @keyframes pulse-ring {
-    0% { transform: scale(0.8); opacity: 0.8; }
-    100% { transform: scale(1.5); opacity: 0; }
+    0% {
+      transform: scale(0.8);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
   }
 
   @keyframes bounce-gentle {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
   }
 
   @keyframes shimmer {
-    0% { background-position: -200% center; }
-    100% { background-position: 200% center; }
+    0% {
+      background-position: -200% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
   }
 
-  .animate-fadeInUp { animation: fadeInUp 0.7s ease forwards; }
-  .delay-1 { animation-delay: 0.1s; }
-  .delay-2 { animation-delay: 0.2s; }
-  .delay-3 { animation-delay: 0.3s; }
-  .delay-4 { animation-delay: 0.4s; }
+  .animate-fadeInUp {
+    animation: fadeInUp 0.7s ease forwards;
+  }
+  .delay-1 {
+    animation-delay: 0.1s;
+  }
+  .delay-2 {
+    animation-delay: 0.2s;
+  }
+  .delay-3 {
+    animation-delay: 0.3s;
+  }
+  .delay-4 {
+    animation-delay: 0.4s;
+  }
 
   /* Base card style */
   .dark-card {

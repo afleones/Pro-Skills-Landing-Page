@@ -1,46 +1,64 @@
-# Astro Starter Kit: Basics
+# PRO SKILLS BASKETBALL - Landing + Zona de Pagos
 
-```sh
-npm create astro@latest -- --template basics
-```
+Sitio web oficial de PRO SKILLS BASKETBALL Colombia, construido con Astro.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Incluye:
+- Landing principal con secciones de academia, programas, entrenadores, sedes, horarios, precios y contacto.
+- Pagina independiente de pagos en `/pagos`.
+- Estilo visual de marca (negro, dorado y amarillo) y componentes reutilizables.
 
-## 🚀 Project Structure
+## Stack
 
-Inside of your Astro project, you'll see the following folders and files:
+- Astro
+- TypeScript
+- CSS (estilos globales y por componente)
+
+## Estructura del proyecto
 
 ```text
 /
 ├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── layouts/
+│   └── pages/
+├── astro.config.mjs
+├── package.json
+└── tsconfig.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Comandos
 
-## 🧞 Commands
+Ejecuta estos comandos en la raiz del proyecto:
 
-All commands are run from the root of the project, from a terminal:
+| Comando | Descripcion |
+| :-- | :-- |
+| `npm install` | Instala dependencias |
+| `npm run dev` | Inicia entorno local en `http://localhost:4321` |
+| `npm run build` | Genera build de produccion |
+| `npm run preview` | Sirve build generado para validacion |
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Rutas principales
 
-## 👀 Want to learn more?
+- `/` - Landing principal
+- `/pagos` - Zona de pagos
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Capturas de pantalla
+
+> Nota: para visualizar las capturas en GitHub, coloca los archivos en `docs/capturas/` con estos nombres.
+
+### Landing principal
+
+![Hero](docs/capturas/01-hero.png)
+![Nosotros](docs/capturas/02-nosotros.png)
+![Programas](docs/capturas/03-programas.png)
+![Entrenadores](docs/capturas/04-entrenadores.png)
+![Sedes](docs/capturas/05-sedes.png)
+![Horarios](docs/capturas/06-horarios.png)
+![Precios](docs/capturas/07-precios.png)
+
+### Zona de pagos
+
+![Pagos hero](docs/capturas/08-pagos-hero.png)
+![Pagos servicios](docs/capturas/09-pagos-servicios.png)
